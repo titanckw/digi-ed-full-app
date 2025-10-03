@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "target": "es2016",
+      "module": "esnext",
+      "lib": ["dom", "esnext"],
+      "jsx": "react-jsx",
+      "strict": true,
+      "moduleResolution": "node",
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["resources/ts/*"]
+      }
+    },
+    "include": ["resources/ts/**/*"],
+    "exclude": ["node_modules"]
+  }
