@@ -45,6 +45,7 @@
     "date-fns": "4.1.0",
     "embla-carousel-react": "8.5.1",
     "geist": "latest",
+    "inertiajs": "^0.0.0",
     "input-otp": "1.4.1",
     "lucide-react": "^0.454.0",
     "next": "15.2.4",
@@ -65,6 +66,7 @@
     "@types/node": "^22",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.1",
+    "@types/react-router-dom": "^5.3.3",
     "postcss": "^8.5",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.9.3"

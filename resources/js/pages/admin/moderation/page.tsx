@@ -1,6 +1,6 @@
 "use client"
 
-import { AdminModerationPanel } from "@/components/admin-moderation-panel"
+import { AdminModerationPanel } from "../../../components/admin-moderation-panel"
 
 export default function AdminModerationPage() {
   return (

@@ -1,18 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../../components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Progress } from "@/components/ui/progress";
-import { Logo } from "@/components/logo";
+} from "../../../components/ui/card";
+import { Badge } from "../../../components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "../../../components/ui/avatar";
+import { Progress } from "../../../components/ui/progress";
+import { Logo } from "../../../components/logo";
 import {
   Users,
   BookOpen,
