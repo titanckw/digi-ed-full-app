@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  @vite(['resources/css/app.css', 'resources/js/app.tsx'])
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title inertia>{{ config('app.name', 'Laravel') }}</title>
+
+  @viteReactRefresh
+  @vite(['resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"])
   @inertiaHead
 </head>
 
-<body>
+<body class="font-sans antialiased">
   @inertia
 </body>
 

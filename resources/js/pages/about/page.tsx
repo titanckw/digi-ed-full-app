@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "../../components/ui/button";
 import {
     Card,
@@ -28,10 +26,10 @@ import {
     Linkedin,
     Twitter,
 } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { router } from "@inertiajs/react";
 
 export default function AboutPage() {
-    const router = useRouter();
+    // Inertia's router is imported and used directly
 
     // Update all about page handlers
 
@@ -64,7 +62,7 @@ export default function AboutPage() {
         };
 
         alert(messages[role as keyof typeof messages]);
-        setTimeout(() => router.push(`/signup?role=${role}`), 1000);
+        setTimeout(() => router.get(`/signup?role=${role}`), 1000);
     };
 
     const handleContactUs = () => {
@@ -195,19 +193,19 @@ export default function AboutPage() {
                     <Logo size="xl" />
                     <nav className="hidden md:flex items-center space-x-6">
                         <button
-                            onClick={() => router.push("/tutors")}
+                            onClick={() => router.get("/tutors")}
                             className="text-gray-600 hover:text-primary transition-colors"
                         >
                             Find Tutors
                         </button>
                         <button
-                            onClick={() => router.push("/how-it-works")}
+                            onClick={() => router.get("/how-it-works")}
                             className="text-gray-600 hover:text-primary transition-colors"
                         >
                             How it Works
                         </button>
                         <button
-                            onClick={() => router.push("/about")}
+                            onClick={() => router.get("/about")}
                             className="text-primary font-medium"
                         >
                             About
@@ -217,13 +215,13 @@ export default function AboutPage() {
                         <Button
                             variant="ghost"
                             className="text-primary hover:text-primary/80"
-                            onClick={() => router.push("/login")}
+                            onClick={() => router.get("/login")}
                         >
                             Login
                         </Button>
                         <Button
                             className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
-                            onClick={() => router.push("/signup")}
+                            onClick={() => router.get("/signup")}
                         >
                             Get Started
                         </Button>
@@ -543,7 +541,7 @@ export default function AboutPage() {
                             <ul className="space-y-2 text-gray-400">
                                 <li>
                                     <button
-                                        onClick={() => router.push("/tutors")}
+                                        onClick={() => router.get("/tutors")}
                                         className="hover:text-white transition-colors text-left"
                                     >
                                         Find Tutors
@@ -551,7 +549,7 @@ export default function AboutPage() {
                                 </li>
                                 <li>
                                     <button
-                                        onClick={() => router.push("/subjects")}
+                                        onClick={() => router.get("/subjects")}
                                         className="hover:text-white transition-colors text-left"
                                     >
                                         Browse Subjects
@@ -559,7 +557,7 @@ export default function AboutPage() {
                                 </li>
                                 <li>
                                     <button
-                                        onClick={() => router.push("/pricing")}
+                                        onClick={() => router.get("/pricing")}
                                         className="hover:text-white transition-colors text-left"
                                     >
                                         Pricing
@@ -574,7 +572,7 @@ export default function AboutPage() {
                                 <li>
                                     <button
                                         onClick={() =>
-                                            router.push("/signup?role=tutor")
+                                            router.get("/signup?role=tutor")
                                         }
                                         className="hover:text-white transition-colors text-left"
                                     >
@@ -584,7 +582,7 @@ export default function AboutPage() {
                                 <li>
                                     <button
                                         onClick={() =>
-                                            router.push("/tutor-resources")
+                                            router.get("/tutor-resources")
                                         }
                                         className="hover:text-white transition-colors text-left"
                                     >
@@ -593,7 +591,7 @@ export default function AboutPage() {
                                 </li>
                                 <li>
                                     <button
-                                        onClick={() => router.push("/earnings")}
+                                        onClick={() => router.get("/earnings")}
                                         className="hover:text-white transition-colors text-left"
                                     >
                                         Earnings
@@ -607,7 +605,7 @@ export default function AboutPage() {
                             <ul className="space-y-2 text-gray-400">
                                 <li>
                                     <button
-                                        onClick={() => router.push("/help")}
+                                        onClick={() => router.get("/help")}
                                         className="hover:text-white transition-colors text-left"
                                     >
                                         Help Center
@@ -615,7 +613,7 @@ export default function AboutPage() {
                                 </li>
                                 <li>
                                     <button
-                                        onClick={() => router.push("/contact")}
+                                        onClick={() => router.get("/contact")}
                                         className="hover:text-white transition-colors text-left"
                                     >
                                         Contact Us
@@ -623,7 +621,7 @@ export default function AboutPage() {
                                 </li>
                                 <li>
                                     <button
-                                        onClick={() => router.push("/privacy")}
+                                        onClick={() => router.get("/privacy")}
                                         className="hover:text-white transition-colors text-left"
                                     >
                                         Privacy Policy

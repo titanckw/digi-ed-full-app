@@ -5,10 +5,10 @@ import { createRoot } from "react-dom/client";
 
 createInertiaApp({
     resolve: (name) => {
-        const pages = (import.meta as any).glob("./Pages/**/*.tsx", {
+        const pages = (import.meta as any).glob("./pages/page.tsx", {
             eager: true,
         });
-        return pages[`./Pages/${name}.tsx`] as Promise<any>;
+        return pages[`./pages/page.tsx`];
     },
     setup({ el, App, props }) {
         createRoot(el).render(<App {...props} />);

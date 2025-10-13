@@ -1,12 +1,10 @@
 {
-  "name": "my-v0-project",
+  "name": "Digi_Ed_Tutor_App",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "lint": "next lint",
-    "start": "next start"
+    "dev": "vite",
+    "build": "vite build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -46,11 +44,8 @@
     "date-fns": "4.1.0",
     "embla-carousel-react": "8.5.1",
     "geist": "latest",
-    "inertiajs": "^0.0.0",
     "input-otp": "1.4.1",
     "lucide-react": "^0.454.0",
-    "next": "15.2.4",
-    "next-themes": "^0.4.4",
     "react": "^18.3.1",
     "react-day-picker": "9.8.0",
     "react-dom": "^18.3.1",
@@ -64,12 +59,15 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
     "@types/node": "^22",
-    "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.1",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "@types/react-router-dom": "^5.3.3",
+    "laravel-vite-plugin": "^1.0.5",
     "postcss": "^8.5",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vite": "^5.4.2"
   }
 }

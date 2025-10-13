@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { Button } from "../../../components/ui/button";
 import {
@@ -44,10 +42,9 @@ import {
     UserCheck,
     Play,
 } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { router } from "@inertiajs/react";
 
 export default function ParentDashboard() {
-    const router = useRouter();
     const [selectedChild, setSelectedChild] = useState("emma");
     const [isMonitoring, setIsMonitoring] = useState(false);
 
@@ -206,7 +203,7 @@ export default function ParentDashboard() {
     };
 
     const handleSettings = () => {
-        router.push("/dashboard/parent/settings");
+        router.get("/dashboard/parent/settings");
     };
 
     const handleEmergencyStop = () => {
@@ -299,7 +296,7 @@ export default function ParentDashboard() {
                         <Button
                             variant="ghost"
                             size="sm"
-                            onClick={() => router.push("/login")}
+                            onClick={() => router.post("/logout")}
                         >
                             <Avatar className="w-8 h-8">
                                 <AvatarImage src="/placeholder.svg?height=32&width=32" />

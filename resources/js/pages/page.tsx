@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "../components/ui/button";
 import {
     Card,
@@ -26,11 +24,10 @@ import {
     UserCheck,
     School,
 } from "lucide-react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { Link, router } from "@inertiajs/react";
 
 export default function HomePage() {
-    const router = useRouter();
+    // Inertia's router is imported and used directly
 
     const features = [
         {
@@ -107,39 +104,39 @@ export default function HomePage() {
     ];
 
     const handleGetStarted = () => {
-        router.push("/signup");
+        router.get("/signup");
     };
 
     const handleFindTutors = () => {
-        router.push("/tutors");
+        router.get("/tutors");
     };
 
     const handleLogin = () => {
-        router.push("/login");
+        router.get("/login");
     };
 
     const handleHowItWorks = () => {
-        router.push("/how-it-works");
+        router.get("/how-it-works");
     };
 
     const handleAbout = () => {
-        router.push("/about");
+        router.get("/about");
     };
 
     const handleParentDashboard = () => {
-        router.push("/dashboard/parent");
+        router.get("/dashboard/parent");
     };
 
     const handleStudentDashboard = () => {
-        router.push("/dashboard/student");
+        router.get("/dashboard/student");
     };
 
     const handleTutorDashboard = () => {
-        router.push("/dashboard/tutor");
+        router.get("/dashboard/tutor");
     };
 
     const handleSchoolDashboard = () => {
-        router.push("/dashboard/school");
+        router.get("/dashboard/school");
     };
 
     const handleContact = () => {
@@ -706,7 +703,7 @@ export default function HomePage() {
                             <p className="text-xl text-gray-600 mb-8">
                                 Bring DigiEd's interactive learning to your
                                 school. Our tools for educators align with the
-                                Kenyan CBC curriculum and help prepare students
+                                Kenyan CBC curriculum, and help prepare students
                                 for KCSE success.
                             </p>
                             <div className="space-y-4 mb-8">
@@ -731,7 +728,7 @@ export default function HomePage() {
                                 size="lg"
                                 className="bg-gradient-to-r from-primary to-secondary"
                                 onClick={() =>
-                                    router.push("/signup?role=school")
+                                    router.get("/signup?role=school")
                                 }
                             >
                                 Learn More About School Plans
